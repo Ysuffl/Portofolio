@@ -1,0 +1,443 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="John Doe - IT Portfolio">
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-400">Who I Am</h3>
+                    <p class="text-gray-300 mb-6">
+                        Saya adalah seorang Full Stack Developer dengan pengalaman 5+ tahun dalam pengembangan web dan aplikasi. 
+                        Passionate dalam menciptakan solusi teknologi yang inovatif dan user-friendly.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Specialized dalam JavaScript, React, Node.js, dan teknologi cloud modern. 
+                        Selalu eager untuk mempelajari teknologi terbaru dan berkontribusi dalam proyek-proyek challenging.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com" target="_blank" class="text-blue-400 hover:text-blue-300 text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-blue-400 hover:text-blue-300 text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-300 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="https://via.placeholder.com/300x300/1f2937/3b82f6?text=Profile" 
+                         alt="John Doe Profile" 
+                         class="w-64 h-64 rounded-full mx-auto border-4 border-blue-400 shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Skills & Technologies</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-colors transform hover:scale-105">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-laptop-code text-4xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400 text-center">Frontend</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>HTML5 & CSS3
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>JavaScript (ES6+)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>React.js & Next.js
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>Vue.js & Nuxt.js
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>Tailwind CSS
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-colors transform hover:scale-105">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-server text-4xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400 text-center">Backend</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>Node.js & Express
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>Python & Django
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>PHP & Laravel
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>REST & GraphQL APIs
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>Microservices
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-colors transform hover:scale-105">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-tools text-4xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400 text-center">Database & Tools</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>MySQL & PostgreSQL
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>MongoDB & Redis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>Git & GitHub
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>Docker & Kubernetes
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-400 mr-2"></i>AWS & Vercel
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://via.placeholder.com/400x200/1f2937/3b82f6?text=E-Commerce+Platform" 
+                             alt="E-Commerce Platform" 
+                             class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-0 hover:bg-opacity-20 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">E-Commerce Platform</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Full-stack e-commerce solution dengan React frontend, Node.js backend, 
+                            payment gateway integration, dan admin dashboard.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-600 text-xs rounded-full">React</span>
+                            <span class="px-2 py-1 bg-green-600 text-xs rounded-full">Node.js</span>
+                            <span class="px-2 py-1 bg-yellow-600 text-xs rounded-full">MongoDB</span>
+                            <span class="px-2 py-1 bg-purple-600 text-xs rounded-full">Stripe</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fab fa-github mr-1"></i>Code
+                                </a>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Live
+                                </a>
+                            </div>
+                            <div class="text-gray-500 text-sm">
+                                <i class="fas fa-star text-yellow-400"></i> Featured
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://via.placeholder.com/400x200/1f2937/3b82f6?text=Task+Manager" 
+                             alt="Task Management App" 
+                             class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-0 hover:bg-opacity-20 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Task Management App</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Aplikasi manajemen tugas dengan real-time collaboration, 
+                            drag & drop functionality, dan team management features.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-600 text-xs rounded-full">Vue.js</span>
+                            <span class="px-2 py-1 bg-orange-600 text-xs rounded-full">Firebase</span>
+                            <span class="px-2 py-1 bg-red-600 text-xs rounded-full">Socket.io</span>
+                            <span class="px-2 py-1 bg-blue-600 text-xs rounded-full">PWA</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fab fa-github mr-1"></i>Code
+                                </a>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Live
+                                </a>
+                            </div>
+                            <div class="text-gray-500 text-sm">
+                                <i class="fas fa-users text-green-400"></i> Collaborative
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://via.placeholder.com/400x200/1f2937/3b82f6?text=Weather+Dashboard" 
+                             alt="Weather Dashboard" 
+                             class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-0 hover:bg-opacity-20 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Weather Dashboard</h3>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Comprehensive weather dashboard dengan real-time data, 
+                            forecasting, interactive maps, dan weather alerts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-600 text-xs rounded-full">React</span>
+                            <span class="px-2 py-1 bg-purple-600 text-xs rounded-full">D3.js</span>
+                            <span class="px-2 py-1 bg-yellow-600 text-xs rounded-full">Weather API</span>
+                            <span class="px-2 py-1 bg-green-600 text-xs rounded-full">Chart.js</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-3">
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fab fa-github mr-1"></i>Code
+                                </a>
+                                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-1"></i>Live
+                                </a>
+                            </div>
+                            <div class="text-gray-500 text-sm">
+                                <i class="fas fa-chart-line text-purple-400"></i> Analytics
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Projects Button -->
+            <div class="text-center mt-12">
+                <a href="/projects" 
+                   class="inline-block bg-transparent border-2 border-blue-400 hover:bg-blue-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-blue-400">Let's Work Together</h3>
+                        <p class="text-gray-300 mb-8">
+                            Interested in collaborating? I'm always open to discussing new opportunities, 
+                            creative projects, and innovative partnerships. Let's build something amazing together!
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <p class="text-white">john.doe@email.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Phone</p>
+                                    <p class="text-white">+62 812-3456-7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center group">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-500 transition-colors">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Location</p>
+                                    <p class="text-white">Jakarta, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="mt-8">
+                            <h4 class="text-lg font-semibold mb-4 text-blue-400">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com" target="_blank" 
+                                   class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" 
+                                   class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" 
+                                   class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" 
+                                   class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                        <form class="space-y-6" id="contact-form">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-20 transition-colors"
+                                       placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-20 transition-colors"
+                                       placeholder="your.email@example.com">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" required
+                                       class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-20 transition-colors"
+                                       placeholder="Project Collaboration">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                          class="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-20 transition-colors resize-none"
+                                          placeholder="Tell me about your project or how we can work together..."></textarea>
+                            </div>
+                            <button type="submit" 
+                                    class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+    
+    // Smooth scroll behavior for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+<style>
+    /* Additional animations for sections */
+    section {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: sectionFadeIn 0.8s ease-out forwards;
+    }
+    
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+    
+    @keyframes sectionFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Hover effects for project cards */
+    .project-card {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+        transition: left 0.5s;
+        z-index: 1;
+    }
+    
+    .project-card:hover::before {
+        left: 100%;
+    }
+    
+    /* Form focus states */
+    input:focus, textarea:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+    }
+    
+    /* Skills cards hover effect */
+    .skills-card {
+        position: relative;
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    }
+    
+    .skills-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .skills-card:hover::after {
+        opacity: 1;
+    }
