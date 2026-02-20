@@ -11,24 +11,34 @@ import {
 const contactMethods = [
     {
         title: "Email",
-        desc: "nafil@engineer.com",
+        desc: "hahayusuf692@gmail.com",
         icon: Mail,
-        color: "bg-indigo-600",
-        link: "mailto:m.yusuf@engineer.com",
+        gradient: "from-indigo-500 to-violet-600",
+        accent: "text-indigo-400/80",
+        link: "mailto:hahayusuf692@gmail.com",
     },
     {
         title: "WhatsApp",
-        desc: "+62 812 3456 7890",
+        desc: "+62 877 8441 5346",
         icon: MessageSquare,
-        color: "bg-emerald-600",
-        link: "https://wa.me/6281234567890",
+        gradient: "from-emerald-400 to-teal-600",
+        accent: "text-emerald-400/80",
+        link: "https://wa.me/6287784415346",
     },
 ];
 
 const socials = [
-    { name: "Github", icon: Github, link: "#" },
-    { name: "Linkedin", icon: Linkedin, link: "#" },
-    { name: "Instagram", icon: Instagram, link: "#" },
+    { name: "Github", icon: Github, link: "https://github.com/Ysuffl" },
+    {
+        name: "Linkedin",
+        icon: Linkedin,
+        link: "https://www.linkedin.com/in/muhammad-yusuf-24892236a",
+    },
+    {
+        name: "Instagram",
+        icon: Instagram,
+        link: "https://www.instagram.com/hdmmyusuf?igsh=dTk3NHBsM2tsd2d3",
+    },
 ];
 ---
 
@@ -74,30 +84,32 @@ const socials = [
                     </p>
                 </div>
 
-                <div class="flex flex-col gap-6 max-w-xs">
+                <div class="flex flex-col gap-6 max-w-sm">
                     {
                         contactMethods.map((method) => (
                             <a
                                 href={method.link}
-                                class="group flex items-center gap-6 p-1 pr-6 rounded-[24px] bg-slate-800/50 border border-slate-700/50 hover:border-indigo-500 transition-all"
+                                class="group flex items-center gap-6 p-2 pr-8 rounded-[32px] bg-slate-800/40 border border-slate-700/50 hover:bg-slate-800/60 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500"
                             >
                                 <div
-                                    class={`w-14 h-14 ${method.color} rounded-[20px] flex items-center justify-center shadow-lg`}
+                                    class={`shrink-0 w-16 h-16 bg-gradient-to-br ${method.gradient} rounded-[24px] flex items-center justify-center shadow-xl shadow-black/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
                                 >
-                                    <method.icon size={24} />
+                                    <method.icon
+                                        size={28}
+                                        stroke-width="2.5"
+                                        class="text-white drop-shadow-md"
+                                    />
                                 </div>
-                                <div class="flex flex-col">
-                                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">
+                                <div class="flex flex-col gap-1">
+                                    <span
+                                        class={`text-[11px] font-bold uppercase tracking-[0.2em] ${method.accent}`}
+                                    >
                                         {method.title}
                                     </span>
-                                    <span class="font-bold text-slate-100">
+                                    <span class="text-lg font-bold text-slate-100 group-hover:text-white transition-colors">
                                         {method.desc}
                                     </span>
                                 </div>
-                                <ArrowRight
-                                    size={18}
-                                    class="ml-auto text-slate-600 group-hover:text-indigo-400 transition-colors"
-                                />
                             </a>
                         ))
                     }
@@ -123,9 +135,11 @@ const socials = [
                                 socials.map((s) => (
                                     <a
                                         href={s.link}
-                                        class="text-white hover:text-indigo-900 transition-colors"
+                                        class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white hover:bg-white hover:text-indigo-600 hover:-translate-y-2 transition-all duration-300"
+                                        target="_blank"
+                                        aria-label={s.name}
                                     >
-                                        <s.icon size={32} />
+                                        <s.icon size={28} />
                                     </a>
                                 ))
                             }

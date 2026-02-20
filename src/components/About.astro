@@ -1,5 +1,14 @@
 ---
-import { ExternalLink, Zap, Rocket, Target, Cpu } from "@lucide/astro";
+import {
+    ExternalLink,
+    Zap,
+    Rocket,
+    Target,
+    Cpu,
+    ArrowRight,
+    GraduationCap,
+    Award,
+} from "@lucide/astro";
 ---
 
 <section id="about" class="py-32 px-6 bg-[#FDFDFD] relative overflow-hidden">
@@ -95,89 +104,174 @@ import { ExternalLink, Zap, Rocket, Target, Cpu } from "@lucide/astro";
                     </div>
 
                     <div
-                        class="relative bg-slate-950 rounded-[56px] p-10 md:p-14 shadow-2xl border border-slate-800/50 backdrop-blur-sm"
+                        class="relative bg-[#1a1c23] rounded-[48px] p-8 md:p-12 shadow-2xl border border-white/5 backdrop-blur-sm"
                     >
-                        <!-- Header -->
-                        <div class="flex justify-between items-center mb-16">
-                            <div class="flex gap-2.5">
-                                <div class="w-3 H-3 rounded-full bg-[#FF5F56]">
-                                </div>
-                                <div class="w-3 H-3 rounded-full bg-[#FFBD2E]">
-                                </div>
-                                <div class="w-3 H-3 rounded-full bg-[#27C93F]">
-                                </div>
-                            </div>
-                            <span
-                                class="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em]"
-                                >RESUME_V3.0</span
-                            >
+                        <!-- Premium Tab Switcher -->
+                        <!-- Premium Tab Switcher -->
+                        <div class="flex p-1.5 bg-white/5 rounded-2xl mb-12 border border-white/5">
+                            <button class="flex-1 py-3 px-4 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 bg-indigo-500/20 text-indigo-400 border border-indigo-500/20 active-tab-btn" data-tab="skills">
+                                Skills
+                            </button>
+                            <button class="flex-1 py-3 px-4 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 text-slate-500 hover:text-slate-300 tab-btn" data-tab="experience">
+                                Experience
+                            </button>
+                            <button class="flex-1 py-3 px-4 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 text-slate-500 hover:text-slate-300 tab-btn" data-tab="education">
+                                Education
+                            </button>
                         </div>
 
-                        <!-- Timeline Items -->
-                        <div class="space-y-12">
-                            {
-                                [
-                                    {
-                                        role: "SR. SOFTWARE ENGINEER",
-                                        company: "Innovation Lab",
-                                        year: "2022-Pres",
-                                    },
-                                    {
-                                        role: "FULLSTACK ARCHITECT",
-                                        company: "Global Tech",
-                                        year: "2020-2022",
-                                    },
-                                    {
-                                        role: "SYSTEM DEVELOPER",
-                                        company: "Creative Agency",
-                                        year: "2018-2020",
-                                    },
-                                ].map((item) => (
-                                    <div class="group/item flex justify-between items-start gap-6 border-b border-slate-900 pb-8 last:border-0 last:pb-0">
-                                        <div class="space-y-2">
-                                            <h4 class="text-white font-black text-xl uppercase font-outfit tracking-wider group-hover/item:text-indigo-400 transition-colors">
-                                                {item.role}
-                                            </h4>
-                                            <div class="flex items-center gap-3">
-                                                <span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">
-                                                    {item.company}
-                                                </span>
-                                                <div class="w-1 H-1 bg-slate-700 rounded-full" />
-                                                <span class="text-slate-400 font-black text-[9px] uppercase tracking-widest">
-                                                    {item.year}
-                                                </span>
+                        <!-- Tab Contents -->
+                        <div class="min-h-[380px]">
+                            <!-- Skills Tab -->
+                            <div id="skills-content" class="space-y-10 animate-fade-in">
+                                <div class="space-y-8">
+                                    {[
+                                        { name: "Systems Architecture", level: "95%" },
+                                        { name: "Modern Frontend", level: "92%" },
+                                        { name: "Backend Resilience", level: "88%" },
+                                        { name: "Design Systems", level: "90%" }
+                                    ].map(skill => (
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between items-center px-1">
+                                                <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-200">{skill.name}</span>
+                                                <span class="text-[10px] font-black text-slate-400">{skill.level}</span>
+                                            </div>
+                                            <div class="h-[6px] w-full bg-white/5 rounded-full overflow-hidden">
+                                                <div class="h-full bg-emerald-500 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.3)]" style={`width: ${skill.level}`}></div>
                                             </div>
                                         </div>
-                                        <div class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-600 group-hover/item:border-indigo-500 group-hover/item:text-indigo-400 transition-all">
-                                            <ExternalLink size={16} />
+                                    ))}
+                                </div>
+
+                                <!-- Tech Tags -->
+                                <div class="flex flex-wrap gap-2.5 pt-8 border-t border-white/5">
+                                    {["React", "Vue", "Astro", "Node.js", "Go", "Docker", "AWS", "Figma"].map(tag => (
+                                        <span class="px-3.5 py-2 bg-white/5 border border-white/5 rounded-xl text-[9px] font-black uppercase tracking-widest text-slate-400 hover:border-indigo-500/30 transition-colors">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <!-- Experience Tab -->
+                            <div id="experience-content" class="hidden animate-fade-in">
+                                <div class="relative pl-8 space-y-12 pb-4">
+                                    <!-- Vertical Line -->
+                                    <div class="absolute left-0 top-2 bottom-2 w-[1px] bg-white/10"></div>
+                                    
+                                    {[
+                                        { role: "Fullstack Engineer", company: "Genion Team", year: "2025 - Present", active: true },
+                                        { role: "Frontend Developer", company: "PT. Multi Raksa Tribrata", year: "2024", active: false },
+                                        { role: "IT Support", company: "Freelancer", year: "2022 - 2023", active: false }
+                                    ].map(item => (
+                                        <div class="relative group/exp">
+                                            <!-- Dot -->
+                                            <div class={`absolute -left-[35.5px] top-1.5 w-4 h-4 rounded-full border-4 border-slate-900 transition-all duration-500 ${item.active ? 'bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.5)]' : 'bg-slate-700 group-hover/exp:bg-slate-500'}`}></div>
+                                            
+                                            <div class="space-y-1.5">
+                                                <p class={`text-[10px] font-black uppercase tracking-widest ${item.active ? 'text-emerald-500' : 'text-slate-500'}`}>{item.year}</p>
+                                                <h4 class="text-white font-black text-xl tracking-tight uppercase transition-colors group-hover/exp:text-indigo-400">{item.role}</h4>
+                                                <p class="text-slate-400 text-[11px] font-bold uppercase tracking-widest">{item.company}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <!-- Education Tab -->
+                            <div id="education-content" class="hidden space-y-4 animate-fade-in">
+                                {[
+                                    { school: "SMK Nurul Islam Jakarta", degree: "Software Engineering", year: "2023 - 2026", icon: GraduationCap },
+                                    { school: "Gamelab Indonesia", degree: "Gamelab Certification", year: "2023", icon: Award }
+                                ].map(item => (
+                                    <div class="group/edu p-6 bg-white/[0.03] border border-white/5 rounded-[32px] flex items-center gap-6 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 group">
+                                        <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-slate-400 group-hover/edu:bg-indigo-500/10 group-hover/edu:text-indigo-400 transition-all">
+                                            <item.icon size={28} stroke-width="1.5" />
+                                        </div>
+                                        <div class="space-y-1">
+                                            <p class="text-[9px] font-black text-emerald-500/80 uppercase tracking-[0.2em]">{item.year}</p>
+                                            <h4 class="text-white font-black text-base uppercase tracking-tight">{item.degree}</h4>
+                                            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{item.school}</p>
                                         </div>
                                     </div>
-                                ))
-                            }
-                        </div>
-
-                        <div
-                            class="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6"
-                        >
-                            <button
-                                class="w-full md:w-auto px-8 py-4 bg-white text-slate-950 font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-indigo-500 hover:text-white transition-all shadow-xl shadow-white/5 active:scale-95"
-                            >
-                                Download CV
-                            </button>
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]"
-                                >
-                                </div>
-                                <span
-                                    class="text-[10px] font-black text-slate-400 uppercase tracking-widest"
-                                    >Available for Hire</span
-                                >
+                                ))}
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+
+                        <!-- Footer -->
+                        <div class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center md:items-end gap-10">
+                            <a href="#portfolio" class="flex items-center gap-3 text-white font-black text-xs uppercase tracking-widest hover:text-indigo-400 transition-colors group/link pb-2">
+                                View Portfolio
+                                <ArrowRight size={16} class="group-hover/link:translate-x-1 transition-transform" />
+                            </a>
+                            
+                            <div class="relative max-w-[320px] p-6 bg-white/[0.03] rounded-3xl border border-white/5 italic">
+                                <span class="absolute -top-3 left-4 text-indigo-500/40 text-4xl">"</span>
+                                <p class="text-slate-400 text-[10px] leading-relaxed relative z-10 font-medium">
+                                    Jangan pernah merasa tertinggal, Setiap orang punya Proses dan rezeki Nya masing masing.
+                                </p>
+                            </div>
+                        </div>
         </div>
     </div>
 </section>
+
+<script>
+    const tabBtns = document.querySelectorAll("[data-tab]");
+    const contents: Record<string, HTMLElement | null> = {
+        skills: document.getElementById("skills-content"),
+        experience: document.getElementById("experience-content"),
+        education: document.getElementById("education-content"),
+    };
+
+    tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const tabId = btn.getAttribute("data-tab");
+            if (!tabId) return;
+
+            // Update buttons style
+            tabBtns.forEach((b) => {
+                b.classList.remove(
+                    "bg-indigo-500/20",
+                    "text-indigo-400",
+                    "border-indigo-500/20",
+                );
+                b.classList.add("text-slate-500");
+            });
+            btn.classList.add(
+                "bg-indigo-500/20",
+                "text-indigo-400",
+                "border-indigo-500/20",
+            );
+            btn.classList.remove("text-slate-500");
+
+            // Toggle contents
+            Object.keys(contents).forEach((key) => {
+                const content = contents[key];
+                if (content) {
+                    if (key === tabId) {
+                        content.classList.remove("hidden");
+                    } else {
+                        content.classList.add("hidden");
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<style>
+    .animate-fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>

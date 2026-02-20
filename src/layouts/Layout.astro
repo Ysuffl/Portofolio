@@ -4,22 +4,117 @@ import "../styles/global.css";
 interface Props {
     title: string;
     description?: string;
+    keywords?: string;
+    ogImage?: string;
+    canonicalURL?: string;
 }
 
-const { title, description = "Professional Fullstack Engineer Portfolio" } =
-    Astro.props;
+const {
+    title,
+    description = "Muhammad Yusuf — Fullstack Engineer spesialisasi di Flutter, Laravel, Go, dan teknologi web modern. Membangun aplikasi mobile dan web yang cepat, scalable, dan indah.",
+    keywords = "Muhammad Yusuf, Fullstack Engineer, Flutter Developer, Laravel Developer, Go Developer, Web Developer, Mobile Developer, Portfolio, Indonesia",
+    ogImage = "/yusuf.jpeg",
+    canonicalURL = Astro.url.href,
+} = Astro.props;
+
+const siteName = "Muhammad Yusuf | Portfolio";
+const twitterHandle = "@yusufdev";
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
+
+        <!-- ═══════════════════════════════════════ -->
+        <!--               PRIMARY SEO               -->
+        <!-- ═══════════════════════════════════════ -->
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content="Muhammad Yusuf" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <link rel="canonical" href={canonicalURL} />
 
+        <!-- ═══════════════════════════════════════ -->
+        <!--              FAVICON / ICONS            -->
+        <!-- ═══════════════════════════════════════ -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <meta name="theme-color" content="#2563EB" />
+        <meta name="msapplication-TileColor" content="#2563EB" />
+
+        <!-- ═══════════════════════════════════════ -->
+        <!--             OPEN GRAPH (OG)             -->
+        <!-- ═══════════════════════════════════════ -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta
+            property="og:image:alt"
+            content="Muhammad Yusuf — Fullstack Engineer"
+        />
+        <meta property="og:site_name" content={siteName} />
+        <meta property="og:locale" content="id_ID" />
+
+        <!-- ═══════════════════════════════════════ -->
+        <!--             TWITTER CARD               -->
+        <!-- ═══════════════════════════════════════ -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={twitterHandle} />
+        <meta name="twitter:creator" content={twitterHandle} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta
+            name="twitter:image:alt"
+            content="Muhammad Yusuf — Fullstack Engineer"
+        />
+
+        <!-- ═══════════════════════════════════════ -->
+        <!--          JSON-LD STRUCTURED DATA        -->
+        <!-- ═══════════════════════════════════════ -->
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Muhammad Yusuf",
+                url: canonicalURL,
+                image: ogImage,
+                jobTitle: "Fullstack Engineer",
+                description: description,
+                knowsAbout: [
+                    "Flutter",
+                    "Laravel",
+                    "Go",
+                    "React",
+                    "Node.js",
+                    "PostgreSQL",
+                    "MySQL",
+                    "Docker",
+                    "REST API",
+                    "Mobile Development",
+                    "Web Development",
+                ],
+                sameAs: [
+                    "https://github.com/yusuf",
+                    "https://linkedin.com/in/yusuf",
+                ],
+            })}
+        />
+
+        <!-- ═══════════════════════════════════════ -->
+        <!--               FONTS                    -->
+        <!-- ═══════════════════════════════════════ -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
