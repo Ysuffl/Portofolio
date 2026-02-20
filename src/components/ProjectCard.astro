@@ -1,0 +1,61 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    tags: string[];
+    image: string;
+    link: string;
+}
+
+const { title, description, tags, image, link } = Astro.props;
+---
+
+<div
+    class="group relative overflow-hidden rounded-2xl bg-slate-800/40 border border-slate-700/50 hover:border-indigo-500/50 transition-all hover:translate-y-[-8px]"
+>
+    <div class="aspect-video w-full overflow-hidden bg-slate-700">
+        <img
+            src={image}
+            alt={title}
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+    </div>
+    <div class="p-6">
+        <div class="flex gap-2 mb-4 flex-wrap">
+            {
+                tags.map((tag) => (
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                        {tag}
+                    </span>
+                ))
+            }
+        </div>
+        <h3
+            class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors"
+        >
+            {title}
+        </h3>
+        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+            {description}
+        </p>
+        <a
+            href={link}
+            class="inline-flex items-center text-sm font-bold text-indigo-400 hover:text-indigo-300 gap-2"
+        >
+            View Project
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+        </a>
+    </div>
+</div>

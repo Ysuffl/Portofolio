@@ -1,0 +1,183 @@
+---
+import { ExternalLink, Zap, Rocket, Target, Cpu } from "@lucide/astro";
+---
+
+<section id="about" class="py-32 px-6 bg-[#FDFDFD] relative overflow-hidden">
+    <!-- Abstract Design Accents -->
+    <div
+        class="absolute inset-0 -z-10 bg-noise opacity-[0.015] pointer-events-none"
+    >
+    </div>
+    <div
+        class="absolute top-1/2 -right-24 w-80 h-80 bg-indigo-50/50 rounded-full blur-[100px] -z-10"
+    >
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+            <!-- Left Side: Editorial Content -->
+            <div class="lg:col-span-6 space-y-12">
+                <div class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-[2px] bg-indigo-600 rounded-full">
+                        </div>
+                        <span
+                            class="text-indigo-600 font-black text-xs uppercase tracking-[0.3em]"
+                            >Story Behind</span
+                        >
+                    </div>
+
+                    <h2
+                        class="text-5xl md:text-7xl font-black text-slate-900 font-outfit uppercase tracking-tighter leading-[0.9]"
+                    >
+                        Engineering <br />
+                        <span class="text-indigo-600 italic">Brilliance.</span>
+                    </h2>
+
+                    <div
+                        class="space-y-6 text-slate-500 text-lg font-medium leading-relaxed max-w-xl"
+                    >
+                        <p>
+                            I am <span
+                                class="text-slate-900 font-black decoration-indigo-200 decoration-4 underline-offset-4 underline"
+                                >Muhammad Yusuf</span
+                            >, a Lead Software Engineer based in Indonesia with
+                            a obsession for crafting pixel-perfect,
+                            high-performance digital experiences.
+                        </p>
+                        <p>
+                            My approach combines deep technical architecture
+                            with an aesthetic eye, ensuring that every line of
+                            code translates into a seamless, meaningful
+                            interaction for the end-user.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Values Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {
+                        [
+                            {
+                                title: "Philosophy",
+                                desc: "Code for the future. Scalable, maintainable, and extremely fast.",
+                                icon: Zap,
+                            },
+                            {
+                                title: "Tech Stack",
+                                desc: "Cutting-edge tools for cutting-edge problems.",
+                                icon: Cpu,
+                            },
+                        ].map((card) => (
+                            <div class="group p-6 rounded-[32px] bg-white border border-slate-100 shadow-sm transition-all hover:shadow-xl hover:shadow-indigo-500/5">
+                                <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:bg-indigo-600 transition-colors">
+                                    <card.icon size={22} />
+                                </div>
+                                <h4 class="font-black text-slate-900 uppercase text-xs tracking-widest mb-2">
+                                    {card.title}
+                                </h4>
+                                <p class="text-slate-400 text-sm font-medium leading-snug">
+                                    {card.desc}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- Right Side: The Experience "Vault" -->
+            <div class="lg:col-span-6">
+                <div class="relative group">
+                    <!-- Dynamic Glow -->
+                    <div
+                        class="absolute -inset-6 bg-indigo-600/5 blur-[80px] rounded-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"
+                    >
+                    </div>
+
+                    <div
+                        class="relative bg-slate-950 rounded-[56px] p-10 md:p-14 shadow-2xl border border-slate-800/50 backdrop-blur-sm"
+                    >
+                        <!-- Header -->
+                        <div class="flex justify-between items-center mb-16">
+                            <div class="flex gap-2.5">
+                                <div class="w-3 H-3 rounded-full bg-[#FF5F56]">
+                                </div>
+                                <div class="w-3 H-3 rounded-full bg-[#FFBD2E]">
+                                </div>
+                                <div class="w-3 H-3 rounded-full bg-[#27C93F]">
+                                </div>
+                            </div>
+                            <span
+                                class="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em]"
+                                >RESUME_V3.0</span
+                            >
+                        </div>
+
+                        <!-- Timeline Items -->
+                        <div class="space-y-12">
+                            {
+                                [
+                                    {
+                                        role: "SR. SOFTWARE ENGINEER",
+                                        company: "Innovation Lab",
+                                        year: "2022-Pres",
+                                    },
+                                    {
+                                        role: "FULLSTACK ARCHITECT",
+                                        company: "Global Tech",
+                                        year: "2020-2022",
+                                    },
+                                    {
+                                        role: "SYSTEM DEVELOPER",
+                                        company: "Creative Agency",
+                                        year: "2018-2020",
+                                    },
+                                ].map((item) => (
+                                    <div class="group/item flex justify-between items-start gap-6 border-b border-slate-900 pb-8 last:border-0 last:pb-0">
+                                        <div class="space-y-2">
+                                            <h4 class="text-white font-black text-xl uppercase font-outfit tracking-wider group-hover/item:text-indigo-400 transition-colors">
+                                                {item.role}
+                                            </h4>
+                                            <div class="flex items-center gap-3">
+                                                <span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">
+                                                    {item.company}
+                                                </span>
+                                                <div class="w-1 H-1 bg-slate-700 rounded-full" />
+                                                <span class="text-slate-400 font-black text-[9px] uppercase tracking-widest">
+                                                    {item.year}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-600 group-hover/item:border-indigo-500 group-hover/item:text-indigo-400 transition-all">
+                                            <ExternalLink size={16} />
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+                        <div
+                            class="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6"
+                        >
+                            <button
+                                class="w-full md:w-auto px-8 py-4 bg-white text-slate-950 font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-indigo-500 hover:text-white transition-all shadow-xl shadow-white/5 active:scale-95"
+                            >
+                                Download CV
+                            </button>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                                >
+                                </div>
+                                <span
+                                    class="text-[10px] font-black text-slate-400 uppercase tracking-widest"
+                                    >Available for Hire</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

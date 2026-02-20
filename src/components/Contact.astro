@@ -1,0 +1,159 @@
+---
+import {
+    Mail,
+    MessageSquare,
+    ArrowRight,
+    Instagram,
+    Linkedin,
+    Github,
+} from "@lucide/astro";
+
+const contactMethods = [
+    {
+        title: "Email",
+        desc: "nafil@engineer.com",
+        icon: Mail,
+        color: "bg-indigo-600",
+        link: "mailto:m.yusuf@engineer.com",
+    },
+    {
+        title: "WhatsApp",
+        desc: "+62 812 3456 7890",
+        icon: MessageSquare,
+        color: "bg-emerald-600",
+        link: "https://wa.me/6281234567890",
+    },
+];
+
+const socials = [
+    { name: "Github", icon: Github, link: "#" },
+    { name: "Linkedin", icon: Linkedin, link: "#" },
+    { name: "Instagram", icon: Instagram, link: "#" },
+];
+---
+
+<section
+    id="contact"
+    class="py-32 px-6 bg-slate-900 text-white relative overflow-hidden"
+>
+    <!-- Background Texture -->
+    <div
+        class="absolute inset-0 -z-10 bg-noise opacity-[0.03] pointer-events-none mix-blend-overlay"
+    >
+    </div>
+    <!-- Modern Glow Background -->
+    <div
+        class="absolute top-0 right-0 w-1/2 h-full bg-indigo-600/10 blur-[150px] -z-10"
+    >
+    </div>
+    <div
+        class="absolute bottom-0 left-0 w-1/2 h-full bg-purple-600/10 blur-[150px] -z-10"
+    >
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <!-- Left: Text Content -->
+            <div class="space-y-10">
+                <div class="space-y-6">
+                    <span
+                        class="text-indigo-400 font-extrabold tracking-[0.4em] uppercase text-xs"
+                        >Available for hire</span
+                    >
+                    <h2
+                        class="text-6xl md:text-8xl font-black font-outfit tracking-tighter leading-none"
+                    >
+                        Let's build <br />
+                        <span class="text-indigo-400">the future</span>
+                    </h2>
+                    <p
+                        class="text-slate-400 text-xl font-medium max-w-md !leading-relaxed"
+                    >
+                        Have a vision? I have the tools to make it a reality.
+                        Reach out for a consultation or just to say hi.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-6 max-w-xs">
+                    {
+                        contactMethods.map((method) => (
+                            <a
+                                href={method.link}
+                                class="group flex items-center gap-6 p-1 pr-6 rounded-[24px] bg-slate-800/50 border border-slate-700/50 hover:border-indigo-500 transition-all"
+                            >
+                                <div
+                                    class={`w-14 h-14 ${method.color} rounded-[20px] flex items-center justify-center shadow-lg`}
+                                >
+                                    <method.icon size={24} />
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">
+                                        {method.title}
+                                    </span>
+                                    <span class="font-bold text-slate-100">
+                                        {method.desc}
+                                    </span>
+                                </div>
+                                <ArrowRight
+                                    size={18}
+                                    class="ml-auto text-slate-600 group-hover:text-indigo-400 transition-colors"
+                                />
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <!-- Right: Big Footer-like Info -->
+            <div
+                class="bg-indigo-600 rounded-[56px] p-12 lg:p-20 text-center lg:text-left shadow-2xl shadow-indigo-600/20"
+            >
+                <h3 class="text-3xl font-black mb-8">Ready to start?</h3>
+                <div class="space-y-12">
+                    <div class="space-y-2">
+                        <p
+                            class="text-indigo-100 text-sm font-bold uppercase tracking-widest"
+                        >
+                            Connect
+                        </p>
+                        <div
+                            class="flex flex-wrap justify-center lg:justify-start gap-8"
+                        >
+                            {
+                                socials.map((s) => (
+                                    <a
+                                        href={s.link}
+                                        class="text-white hover:text-indigo-900 transition-colors"
+                                    >
+                                        <s.icon size={32} />
+                                    </a>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <div class="pt-12 border-t border-white/20">
+                        <div
+                            class="flex items-center justify-center lg:justify-start gap-4 mb-4"
+                        >
+                            <div
+                                class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center font-black text-indigo-600 text-2xl"
+                            >
+                                Y
+                            </div>
+                            <span
+                                class="text-2xl font-black font-outfit uppercase"
+                                >Muhammad Yusuf</span
+                            >
+                        </div>
+                        <p
+                            class="text-indigo-200 text-sm font-bold uppercase tracking-widest"
+                        >
+                            &copy; {new Date().getFullYear()} All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

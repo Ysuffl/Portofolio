@@ -1,0 +1,166 @@
+---
+import { ArrowUpRight, Plus } from '@lucide/astro';
+
+const projects = [
+    {
+        id: "01",
+        title: "KASIS APP",
+        category: "MOBILE APP",
+        description: "Aplikasi Multi-Platform (Windows, Linux, Android, Web) pencatatan Manajemen Kas dan Pelanggaran siswa bekerja sama dengan OSIS SMK NURUL ISLAM JAKARTA.",
+        image: "/kasis.png",
+        tags: ["Flutter", "Dart", "Firebase", "REST API"],
+        link: "#",
+        color: "from-indigo-900/80 to-slate-900/90"
+    },
+    {
+        id: "02",
+        title: "EDUCATION PORTAL",
+        category: "TEAM PROJECT",
+        description: "Platform manajemen pembelajaran terpadu untuk institusi pendidikan modern dengan fitur real-time collaboration.",
+        image: "https://images.unsplash.com/photo-1523240715181-310f9d14574e?auto=format&fit=crop&q=80&w=2070",
+        tags: ["Laravel", "Vue.js", "MySQL"],
+        link: "#",
+        color: "from-slate-800/80 to-slate-950/90"
+    },
+    {
+        id: "03",
+        title: "ACADEMIC SYSTEM",
+        category: "ACADEMIC",
+        description: "Sistem informasi akademik komprehensif untuk pengelolaan data nilai, kehadiran, dan administrasi siswa secara efisien.",
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=2070",
+        tags: ["React", "Node.js", "PostgreSQL"],
+        link: "#",
+        color: "from-blue-900/80 to-slate-900/90"
+    },
+    {
+        id: "04",
+        title: "MANAGEMENT ERP",
+        category: "MANAGEMENT",
+        description: "Enterprise Resource Planning (ERP) khusus untuk UMKM guna mengelola stok, penjualan, dan laporan keuangan dalam satu dashboard.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426",
+        tags: ["Next.js", "Tailwind", "Supabase"],
+        link: "#",
+        color: "from-purple-900/80 to-slate-900/90"
+    }
+];
+---
+
+<section id="portfolio" class="py-24 px-4 md:px-6 bg-[#111111] overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-16">
+            <span class="text-indigo-500 font-extrabold tracking-[0.3em] uppercase text-[10px] mb-4 block">Portfolio</span>
+            <h2 class="text-4xl md:text-5xl font-black font-outfit text-white leading-tight">
+                Featured <span class="text-indigo-500">Projects.</span>
+            </h2>
+        </div>
+
+        <!-- Interactive Vertical Accordion -->
+        <div class="flex flex-col lg:flex-row gap-4 h-[600px] lg:h-[550px] w-full items-stretch">
+            {projects.map((project, index) => (
+                <div 
+                    class={`project-card group relative overflow-hidden rounded-[32px] md:rounded-[40px] transition-all duration-700 cursor-pointer shadow-2xl flex-1 lg:flex-[0.8] ${index === 0 ? 'expanded' : ''}`}
+                    data-id={project.id}
+                >
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 z-0">
+                        <img 
+                            src={project.image} 
+                            alt={project.title} 
+                            class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                        />
+                        <!-- Dark Overlay -->
+                        <div class={`absolute inset-0 bg-gradient-to-b ${project.color} mix-blend-multiply opacity-90 transition-opacity duration-700`}></div>
+                    </div>
+
+                    <!-- Collapsed State: Vertical Text -->
+                    <div class="collapsed-content absolute inset-0 z-10 flex flex-col items-center justify-between py-12 transition-all duration-700 opacity-100 group-[.expanded]:opacity-0">
+                        <span class="text-white/30 font-black text-xl font-outfit">{project.id}</span>
+                        <h3 class="text-white/60 font-black text-2xl font-outfit uppercase tracking-widest [writing-mode:vertical-lr] rotate-180 translate-y-4">
+                            {project.title.split(' ')[0]}
+                        </h3>
+                        <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/40">
+                            <Plus size={20} />
+                        </div>
+                    </div>
+
+                    <!-- Expanded State: Content -->
+                    <div class="expanded-content absolute inset-0 z-20 flex flex-col justify-end p-8 md:p-12 transition-all duration-700 opacity-0 transform translate-y-10 group-[.expanded]:opacity-100 group-[.expanded]:translate-y-0">
+                        <div class="max-w-2xl space-y-4 md:space-y-6">
+                            <div class="flex items-center gap-4">
+                                <span class="px-4 py-1.5 rounded-full bg-indigo-600/20 border border-indigo-400/30 text-indigo-400 text-[10px] font-black uppercase tracking-widest shadow-lg backdrop-blur-md">
+                                    {project.category}
+                                </span>
+                                <div class="h-[1px] w-20 bg-white/20"></div>
+                            </div>
+
+                            <h3 class="text-4xl md:text-6xl font-black font-outfit text-white tracking-tighter leading-none">
+                                {project.title}
+                            </h3>
+
+                            <p class="text-white/60 text-base md:text-lg font-medium leading-relaxed max-w-lg">
+                                {project.description}
+                            </p>
+
+                            <div class="flex flex-wrap gap-3">
+                                {project.tags.map(tag => (
+                                    <span class="text-white/40 text-[11px] font-black uppercase tracking-widest">#{tag}</span>
+                                ))}
+                            </div>
+
+                            <div class="pt-4">
+                                <a href={project.link} class="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all shadow-xl active:scale-95">
+                                    View Project <ArrowUpRight size={18} />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Index number background -->
+                        <div class="absolute top-10 right-10 text-white/5 text-8xl md:text-[180px] font-black font-outfit select-none leading-none">
+                            {project.id}
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<script>
+    const cards = document.querySelectorAll('.project-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            cards.forEach(c => c.classList.remove('expanded'));
+            card.classList.add('expanded');
+        });
+    });
+</script>
+
+<style>
+    .project-card.expanded {
+        flex: 10 !important;
+        cursor: default;
+    }
+
+    @media (max-width: 1024px) {
+        #portfolio .flex-col {
+            height: auto;
+        }
+        .project-card {
+            min-height: 120px;
+            width: 100%;
+        }
+        .project-card.expanded {
+            min-height: 450px;
+        }
+        .collapsed-content {
+            flex-direction: row !important;
+            padding: 0 2rem !important;
+        }
+        .collapsed-content h3 {
+            writing-mode: horizontal-tb !important;
+            transform: none !important;
+            rotate: 0deg !important;
+        }
+    }
+</style>

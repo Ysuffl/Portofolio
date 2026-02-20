@@ -1,0 +1,120 @@
+---
+import { Code, Server, PenTool, Database, Globe, Layers } from '@lucide/astro';
+
+const skillGroups = [
+    {
+        title: "Frontend Architecture",
+        icon: Code,
+        skills: [
+            { name: "React / Next.js", level: "95%" },
+            { name: "Astro", level: "90%" },
+            { name: "Tailwind CSS", level: "98%" },
+            { name: "TypeScript", level: "85%" }
+        ]
+    },
+    {
+        title: "Backend & Infrastructure",
+        icon: Server,
+        skills: [
+            { name: "Node.js / Express", level: "80%" },
+            { name: "PostgreSQL", level: "75%" },
+            { name: "Docker / Kubernetes", level: "70%" },
+            { name: "AWS / Vercel", level: "85%" }
+        ]
+    },
+    {
+        title: "Product Engineering",
+        icon: PenTool,
+        skills: [
+            { name: "UI/UX Design", level: "75%" },
+            { name: "System Architecture", level: "80%" },
+            { name: "Performance Optimization", level: "90%" },
+            { name: "SEO Mastery", level: "85%" }
+        ]
+    }
+];
+---
+
+<section id="skills" class="py-32 px-6 bg-[#FDFDFD] relative overflow-hidden">
+    <!-- Sophisticated Background Details -->
+    <div class="absolute inset-0 -z-10 bg-noise opacity-[0.01] pointer-events-none"></div>
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-indigo-100/30 blur-[120px] rounded-full -z-10"></div>
+    
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+            <div class="max-w-xl">
+                <span class="text-indigo-600 font-extrabold tracking-[0.3em] uppercase text-[10px] mb-4 block">Skills & Expertise</span>
+                <h2 class="text-5xl md:text-6xl font-black font-outfit text-slate-900 leading-tight">
+                    Engineering <span class="bg-indigo-600 text-white px-4 py-1 rotate-1 inline-block mt-2">Mastery.</span>
+                </h2>
+            </div>
+            <p class="text-slate-500 font-medium max-w-sm mb-2">
+                Building robust digital ecosystems with a focus on performance, scalability, and clean code principles.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            {skillGroups.map((group) => (
+                <div class="group relative bg-white border border-slate-100/80 rounded-[48px] p-10 transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.06)] hover:-translate-y-2">
+                    <!-- Modern Glass Icon -->
+                    <div class="w-16 h-16 bg-slate-50 rounded-[24px] flex items-center justify-center text-slate-900 mb-10 border border-slate-100 shadow-sm transition-all duration-700 group-hover:bg-indigo-600 group-hover:text-white group-hover:rotate-[10deg] group-hover:scale-110">
+                        <group.icon size={28} stroke-width={2.5} />
+                    </div>
+
+                    <h3 class="text-2xl font-black text-slate-900 font-outfit mb-8 uppercase tracking-wide">
+                        {group.title}
+                    </h3>
+
+                    <div class="space-y-8">
+                        {group.skills.map((skill) => (
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center text-[11px] font-black uppercase tracking-[0.15em] text-slate-400">
+                                    <span class="text-slate-800">{skill.name}</span>
+                                    <span class="text-indigo-600">{skill.level}</span>
+                                </div>
+                                <div class="h-[8px] w-full bg-slate-100 rounded-full overflow-hidden relative">
+                                    <div 
+                                        class="h-full bg-indigo-600 rounded-full transition-all duration-[1.5s] ease-out-expo group-hover:bg-indigo-500 relative"
+                                        style={`width: ${skill.level}`}
+                                    >
+                                        <!-- Glossy Effect on Bar -->
+                                        <div class="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent)] translate-x-[-100%] animate-[shimmer_3s_infinite]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <!-- Featured Tech Stack Icons -->
+        <div class="mt-24 flex flex-wrap justify-center gap-4">
+            {[
+                { name: "React", color: "text-sky-500" },
+                { name: "Next.js", color: "text-slate-900" },
+                { name: "TypeScript", color: "text-blue-600" },
+                { name: "Node.js", color: "text-emerald-600" },
+                { name: "PostgreSQL", color: "text-indigo-600" },
+                { name: "Docker", color: "text-blue-500" },
+                { name: "Tailwind", color: "text-teal-500" },
+                { name: "Astro", color: "text-orange-600" }
+            ].map((tech) => (
+                <div class="px-6 py-3 rounded-full bg-white border border-slate-100 text-slate-600 text-[11px] font-black uppercase tracking-widest shadow-sm hover:border-indigo-200 hover:text-indigo-600 cursor-default transition-all duration-300">
+                    {tech.name}
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .ease-out-expo {
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(200%); }
+    }
+</style>
