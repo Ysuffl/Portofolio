@@ -14,9 +14,9 @@ export const ArchitectureStage: React.FC<ArchitectureStageProps> = ({ isFlooded 
       id: 'web',
       icon: <Code2 className="w-5 h-5 text-[#0284c7]" />,
       title: 'Fullstack Web Development',
-      subtitle: 'Laravel Monolith & Modern React Ecosystem',
-      desc: 'Membangun aplikasi web end-to-end dengan backend Laravel / Node.js dan frontend modern React, Next.js, serta TypeScript. Terbiasa mengelola pemodelan database relasional, optimasi query SQL, integrasi REST API, dan antarmuka reaktif yang responsif.',
-      tags: ['Laravel', 'Inertia.js', 'React', 'Next.js', 'TypeScript', 'PostgreSQL', 'MySQL', 'Tailwind CSS']
+      subtitle: 'Web Development & System Engineering',
+      desc: 'Mengembangkan aplikasi web dan sistem internal menggunakan Laravel dan teknologi modern. Berfokus pada clean architecture, REST API, database PostgreSQL, serta pengembangan sistem ERP, reporting, dan dashboard untuk kebutuhan bisnis.',
+      tags: ['Laravel', 'PHP', 'JavaScript', 'REST API', 'TypeScript', 'PostgreSQL', 'MySQL', 'Tailwind CSS']
     },
     {
       id: 'mobile',
@@ -30,9 +30,9 @@ export const ArchitectureStage: React.FC<ArchitectureStageProps> = ({ isFlooded 
       id: 'linux',
       icon: <Terminal className="w-5 h-5 text-[#8c6239]" />,
       title: 'Linux & DevOps Workflows',
-      subtitle: 'NixOS Daily Driver & Server Management',
-      desc: 'Menggunakan NixOS sebagai sistem operasi harian dengan konfigurasi deklaratif Flakes. Terbiasa dengan manajemen server Linux (Debian/Arch), containerisasi Docker, otomatisasi skrip Bash, dan workflow kolaborasi Git.',
-      tags: ['NixOS Flakes', 'Arch Linux', 'Debian Server', 'Docker', 'Git Branching', 'Bash CLI']
+      subtitle: 'Arch Linux Daily Driver & Server Management',
+      desc: 'Menggunakan Arch Linux sebagai daily driver untuk development dan eksplorasi sistem. Melakukan kustomisasi desktop menggunakan Hyprland, mengelola package dan system configuration, menggunakan Docker untuk development environment, serta mengelola server Linux dan workflow Git.',
+      tags: ['Arch Linux', 'Hyprland', 'Debian Server', 'Docker', 'Git Branching', 'Bash CLI']
     }
   ];
 

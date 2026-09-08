@@ -1,13 +1,13 @@
 import type { ProfileData, Project, TechItem, ExperienceItem } from '../types/portfolio';
 
 export const profileData: ProfileData = {
-  name: 'Reyhand Astra',
+  name: 'Muhammad Yusuf',
   tagline: 'Full-Stack & Mobile Developer',
-  education: 'Teknik Informatika (S1) • Universitas Widyatama',
+  education: 'Rekayasa Perangkat Lunak • SMK NURUL ISLAM Jakarta',
   status: 'Available for Engineering Roles & Projects',
   bio: 'Informatics engineering undergraduate focused on building end-to-end web platforms and mobile applications with resilient architecture, clean code, and Linux-driven workflows.',
   experienceStart: 'Active Developer',
-  avatarUrl: '/avatar.svg',
+  avatarUrl: '/yusuf.jpeg',
   interests: [
     'Web Architecture',
     'Mobile Systems',
@@ -16,9 +16,9 @@ export const profileData: ProfileData = {
     'Reactive Interfaces'
   ],
   contact: {
-    email: 'ryhndastra@gmail.com',
-    github: 'https://github.com/ryhndastra',
-    linkedin: 'https://linkedin.com/in/reyhand-astra',
+    email: 'hahayusuf692@gmail.com',
+    github: 'https://github.com/Ysuffl',
+    linkedin: 'https://linkedin.com/in/muhammad-yusuffl',
     location: 'Indonesia'
   }
 };
@@ -205,65 +205,58 @@ export const techStackData: TechItem[] = [
 
 export const projectsData: Project[] = [
   {
-    id: 'cimart',
-    title: 'CiMart (CibendaMart)',
-    subtitle: 'Rural E-Commerce Platform for Desa Cibenda, Pangandaran',
+    id: 'pkl',
+    title: 'PKL (Administrasi PKL)',
+    subtitle: 'Administrasi PKL SMK Nurul Islam Jakarta',
     category: 'fullstack',
-    summary: 'Platform e-commerce desa yang dibangun atas permintaan Wakil Rektor & Prodi untuk memberdayakan transaksi komoditas sembako, hasil tani, ternak, ikan, dan UMKM warga Desa Cibenda.',
-    description: 'Proyek inisiatif digitalisasi desa yang dimandatkan langsung oleh pimpinan kampus bekerjasama dengan perangkat Desa Cibenda. Platform ini menjembatani produsen desa langsung dengan pembeli regional melalui integrasi peta dan pembayaran terotomatisasi.',
+    summary: 'Platform administrasi PKL SMK Nurul Islam Jakarta',
+    description: 'Proyek yang di kembangkan untuk memudahkan seluruh administrasi PKL SMK Nurul Islam Jakarta mulai dari penempatan PKL, surat menyurat, absensi, hingga laporan PKL.',
     architecture: [
-      'Backend monolitik Laravel dengan routing frontend React TypeScript via Inertia.js',
-      'WebSockets untuk sinkronisasi pesanan dan status transaksi real-time',
+      'Menggunakan Laravel sebagai backbone utama dengan Vue.js untuk frontend',
       'Firebase Cloud Messaging (FCM) untuk push notification otomatis',
-      'Integrasi Leaflet / OpenStreetMap untuk pemetaan titik pengantaran desa',
-      'Payment gateway Midtrans otomatis dengan otentikasi Google OAuth',
+      'Integrasi Leaflet / OpenStreetMap untuk pemetaan titik lokasi PKL',
+      'Menggunakan Laravel Blade untuk mempermudah deployment dan maintenance',
       'Containerisasi Docker untuk memastikan reliabilitas deployment antar server'
     ],
     stack: [
       'Laravel',
-      'Inertia.js',
-      'React',
-      'TypeScript',
-      'MySQL',
+      'Vue.js',
+      'PostgreSQL',
       'Tailwind CSS',
       'Docker',
-      'FCM',
-      'WebSockets',
-      'Leaflet / OSM',
-      'Midtrans',
-      'Google OAuth'
+      'Firebase Cloud Messaging (FCM)',
+      'Leaflet / OpenStreetMap',
     ],
     highlights: [
-      'Inisiatif resmi atas penugasan Warek & Prodi Teknik Informatika',
-      'Mendukung komoditas sembako, pertanian, peternakan, perikanan, dan kerajinan',
-      'Sistem pembayaran digital instan dan pemetaan akurat level desa'
+      'Inisiatif resmi atas penugasan Wakil Dunia Usaha dan Hubungan Industri',
+      'Mendukung kebutuhan administrasi PKL di SMK Nurul Islam Jakarta',
+      'Sistem administrasi PKL yang terintegrasi untuk memudahkan seluruh administrasi PKL'
     ],
     challenges: 'Dikerjakan dan diarsiteki secara mandiri dari nol hingga tahap produksi karena keterbatasan anggota tim.',
     role: 'Full-Stack Engineer',
-    demoUrl: 'https://cimart.desa.id',
+    demoUrl: 'https://pkl.smknurisjkt.org',
     isPrivateRepo: true,
     privateRepoReason: 'Repository privat karena hak cipta institusi & kerahasiaan data',
-    imageUrl: '/projects/CibendaMart.png',
+    imageUrl: '/projects/pkl.png',
     imageFit: 'cover',
     featured: true,
     metrics: [
       { label: 'Engineering', value: 'Full-Stack Developer' },
-      { label: 'Architecture', value: 'Laravel Inertia' },
-      { label: 'Payment API', value: 'Midtrans Iris' }
+      { label: 'Architecture', value: 'Laravel Blade' },
+      { label: 'User', value: '300+' }
     ]
   },
   {
-    id: 'villanakey',
-    title: 'villaNaKey',
-    subtitle: 'Aplikasi Mobile Booking & Manajemen Reservasi Villa Keluarga',
+    id: 'kasis',
+    title: 'Kasis',
+    subtitle: 'Aplikasi Mobile pencatatan Manajemen Kas & Pelanggaran siswa',
     category: 'mobile',
-    summary: 'Aplikasi mobile booking khusus untuk mendukung operasional bisnis hospitality villa pribadi keluarga dengan sinkronisasi kalender real-time tanpa risiko double-booking.',
-    description: 'Dikembangkan sebagai proyek akhir kampus untuk mendigitalisasi pemesanan villa keluarga, mengeliminasi risiko double-booking, dan mempermudah pengecekan jadwal reservasi bagi pengelola dan tamu.',
+    summary: 'Aplikasi mobile untuk mendukung osis dalam mencatat keuangan dan pelanggaran siswa dengan sinkronisasi data real-time.',
+    description: 'Dikembangkan sebagai solusi untuk osis dalam mendigitalisasi pencatatan manajemen kas dan pelanggaran siswa, serta mempermudah dalam membuat laporan bulanan.',
     architecture: [
       'Aplikasi mobile multi-platform dibangun dengan Flutter dan Dart SDK',
-      'Firebase Authentication untuk otentikasi aman pengelola dan tamu',
-      'Cloud Firestore NoSQL real-time database untuk sinkronisasi instan jadwal reservasi',
-      'Komponen custom calendar interaktif dengan highlight tanggal booking aktif'
+      'Firebase Authentication untuk otentikasi aman pengelola dan anggota osis',
+      'Cloud Firestore NoSQL real-time database untuk sinkronisasi instan data kas dan pelanggaran',
     ],
     stack: [
       'Flutter',
@@ -273,117 +266,114 @@ export const projectsData: Project[] = [
       'Mobile Architecture'
     ],
     highlights: [
-      'Digunakan langsung pada operasional villa pribadi keluarga',
-      'Sinkronisasi status booking instan tanpa latency',
-      'Kalender interaktif visual untuk kemudahan reservasi tanggal'
+      'Digunakan langsung sebagai platform OSIS SMK NURUL ISLAM Jakarta.',
+      'Sinkronisasi data real-time',
+      'Mempermudah dalam membuat laporan bulanan'
     ],
-    challenges: 'Proyek aplikasi mobile pertama; mempelajari Flutter dan reaktif state management dari nol bersama kelompok di bawah tenggat waktu akademik yang ketat.',
+    challenges: 'Proyek aplikasi mobile pertama; mempelajari Flutter dan reaktif state management dari nol.',
     role: 'Mobile Developer & Technical Lead',
-    githubUrl: 'https://github.com/ryhndastra/villanakey',
+    githubUrl: '',
     isMobileApp: true,
-    demoStatusLabel: 'Aplikasi Mobile Native (Demo/APK on request)',
-    imageUrl: '/projects/villa.png',
-    imageFit: 'contain',
+    demoStatusLabel: 'Aplikasi Mobile',
+    imageUrl: '/projects/kasis.png',
+    imageFit: 'cover',
     featured: true,
     metrics: [
       { label: 'Mobile Engine', value: 'Flutter & Dart' },
-      { label: 'Database Sync', value: 'Real-Time NoSQL' },
-      { label: 'State & Cloud', value: 'Firebase Suite' }
+      { label: 'Database Sync', value: 'Real-Time' },
+      { label: 'State & Cloud', value: 'Firebase' }
     ]
   },
   {
-    id: 'kalorin-ai',
-    title: 'kalorinAi',
-    subtitle: 'Platform Web Nutrisi & Tracking Kalori Berbasis Computer Vision AI',
+    id: 'ho-reporting',
+    title: 'HoReporting',
+    subtitle: 'Platform Web Laporan Masalah di berbagai cabang.',
     category: 'fullstack',
-    summary: 'Platform pelacak nutrisi cerdas dengan pengenalan citra piring makanan berbasis AI untuk menghitung kalori, makronutrien, serta rekomendasi harian.',
-    description: 'Capstone Project Dicoding CodingCamp 2026 Powered by DBS Foundation yang dikembangkan bersama tim 6 orang (2 Data Analyst, 2 AI Engineer, 2 Fullstack). Fitur mencakup kalkulator BMI, tracking asupan harian, streak, insight AI, dan rekomendasi menu.',
+    summary: 'Platform laporan masalah untuk berbagai cabang yang di lengkapi dengan sistem notifikasi real-time untuk mempermudah dalam melaporkan masalah dan menindak lanjutinya.',
+    description: 'Dikembangkan sebagai solusi untuk memudahkan pelaporan masalah di berbagai cabang dengan dilengkapi sistem notifikasi real-time untuk mempermudah dalam melaporkan masalah dan menindak lanjutinya.',
     architecture: [
-      'Client web modern menggunakan React, Vite, dan Tailwind CSS v4',
-      'Database dan layer data menggunakan Supabase dan Prisma ORM',
-      'Sistem otentikasi aman menggunakan Firebase Auth',
-      'Pipeline computer vision TensorFlow/Keras di backend Python untuk mendeteksi porsi dan nilai gizi (kalori, protein, lemak, karbohidrat)',
-      'Mesin rekomendasi harian adaptif berdasarkan target kalori pengguna'
+      'Client web modern menggunakan Laravel Blade dan Tailwind CSS v4',
+      'Database dan layer data menggunakan PostgreSQL',
+      'Sistem otentikasi aman menggunakan Laravel Auth',
+      'Sistem notifikasi real-time untuk mempermudah dalam melaporkan masalah dan menindak lanjutinya.',
     ],
     stack: [
-      'React',
+      'Laravel',
+      'Blade',
+      'Tailwind CSS',
+      'PostgreSQL',
+      'Vue.js',
       'Vite',
-      'Tailwind CSS v4',
-      'TypeScript',
-      'Supabase',
-      'Prisma ORM',
-      'Firebase Auth',
-      'TensorFlow',
-      'Python'
+      'SMTP',
     ],
     highlights: [
-      'Capstone Project Dicoding CodingCamp 2026 Powered by DBS Foundation',
-      'Deteksi citra makanan otomatis untuk kalkulasi makronutrien instan',
-      'Sistem insight harian dan rekomendasi personal berbasis AI'
+      'Project perusahaan (PT. Exotic Group Concept).',
+      'Sistem informasi manajemen.',
+      'Sistem notifikasi real-time.'
     ],
-    challenges: 'Menggarap seluruh arsitektur web dan integrasi API secara mandiri di tengah jadwal padat antara perkuliahan semester aktif dan bootcamp.',
-    role: 'Lead Web Full-Stack Developer',
-    githubUrl: 'https://github.com/ryhndastra/kalorin-ai',
-    demoUrl: 'https://kalorin-ai.vercel.app',
-    imageUrl: '/projects/kalorinLogo.png',
-    imageFit: 'contain',
+    challenges: 'Menggarap seluruh arsitektur web dan integrasi API secara mandiri.',
+    role: 'Full-Stack Developer',
+    githubUrl: '',
+    demoUrl: '',
+    imageUrl: '/projects/HO-Reporting.png',
+    imageFit: 'cover',
     featured: true,
     metrics: [
-      { label: 'Capstone Team', value: '6 Engineers' },
-      { label: 'AI Inference', value: 'TensorFlow CNN' },
-      { label: 'Web Platform', value: 'React & Vite' }
+      { label: 'Engineering', value: 'Fullstack Developer' },
+      { label: 'Architecture', value: 'Laravel' },
+      { label: 'Frontend', value: 'Laravel Blade' }
     ]
   }
 ];
 
 export const experienceData: ExperienceItem[] = [
   {
-    id: 'edu-widyatama',
+    id: 'SMK Nurul Islam Jakarta',
     period: '2023 - Sekarang',
-    role: 'S1 Teknik Informatika',
-    organization: 'Universitas Widyatama (Angkatan 2023)',
+    role: 'Rekayasa Perangkat Lunak',
+    organization: 'SMK Nurul Islam Jakarta (Angkatan 2023 - 2027)',
     badge: 'Pendidikan Formal',
     category: 'education',
     description:
-      'Menempuh studi sarjana Teknik Informatika dengan pendalaman fundamental ilmu komputer, struktur data, algoritma, rekayasa perangkat lunak, dan mengambil penjurusan spesialisasi Database / Data Analyst.',
+      'Menempuh studi rekayasa perangkat lunak dengan pendalaman fundamental ilmu komputer, struktur data, algoritma, rekayasa perangkat lunak, dan mengambil penjurusan spesialisasi Database / Data Analyst.',
     highlights: [
-      'Penjurusan Database & Data Analyst',
+      'Pemrograman Berorientasi Objek',
       'Pemodelan Data Relasional & Optimasi Query SQL',
       'Fundamental Rekayasa Perangkat Lunak & Algoritma'
     ],
     tech: ['Database Systems', 'Data Analysis', 'SQL', 'Algorithms', 'Software Engineering', 'System Design']
   },
   {
-    id: 'exp-dicoding-dbs',
-    period: 'Feb 2026 - Jul 2026',
-    role: 'Fullstack Developer (Learning Path)',
-    organization: 'Dicoding CodingCamp 2026 Powered by DBS Foundation',
-    badge: 'Intensive Bootcamp',
+    id: 'exp-multiraksa-ft',
+    period: 'Agustus 2024 - Juli 2026',
+    role: 'Frontend Developer',
+    organization: 'PT. Multiraksa Tribrata',
+    badge: 'Corporate Training',
     category: 'bootcamp',
     description:
-      'Program beasiswa pelatihan intensif Fullstack Developer dari Dicoding dan DBS Foundation. Membangun arsitektur frontend web modern (React & Vite), integrasi API backend type-safe, otentikasi data, dan berkolaborasi dalam Capstone Project kalorinAI.',
+      'Program Teaching Factory di SMK Nurul Islam Jakarta bekerjasama dengan PT. Multiraksa dengan fokus pada pengembangan web modern menggunakan React, TypeScript, dan integrasi REST API. Dilengkapi juga dengan pembelajaran state management, otentikasi data, dan kolaborasi tim dalam project client.',
     highlights: [
-      'Lulusan Jalur Fullstack Developer',
-      'Integrasi REST API, State Management & Cloud DB',
-      'Kolaborasi Tim Capstone Project kalorinAI'
+      'Peserta program teaching factory',
+      'Pengembangan web modern menggunakan React, TypeScript dan integrasi REST API',
+      'Project bersama tim dengan pendekatan Agile Development'
     ],
-    tech: ['React', 'TypeScript', 'Node.js', 'Supabase', 'Prisma ORM', 'Tailwind CSS', 'REST API']
+    tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'REST API']
   },
   {
-    id: 'exp-cimart-mbkm',
+    id: 'exp-exotic-pkl',
     period: 'Jul 2026 - Sekarang',
     role: 'Full-Stack Developer',
-    organization: 'Inisiatif MBKM / KKN Tematik & Capstone Kampus Desa Cibenda',
-    badge: 'MBKM / Capstone Kampus',
+    organization: 'PT. Exotic Group Concept (PKL)',
+    badge: 'Praktik Kerja Lapangan (PKL)',
     category: 'project',
     description:
-      'Inisiatif MBKM / KKN Tematik resmi dari kampus yang menjadi Capstone Project untuk digitalisasi komoditas ekonomi warga Desa Cibenda, Pangandaran. Dikerjakan secara mandiri dari perancangan arsitektur sistem, integrasi payment gateway Midtrans, notifikasi FCM, hingga deployment produksi.',
+      'Project PKL resmi dari PT. Exotic Group Concept dengan fokus pada pengembangan sistem informasi manajemen.',
     highlights: [
-      'Mandat Resmi Pimpinan Kampus & Perangkat Desa',
-      'Development Arsitektur End-to-End',
-      'Integrasi Payment Gateway Midtrans & WebSockets'
+      'Project PKL resmi dari PT. Exotic Group Concept',
+      'Pengembangan sistem informasi manajemen',
+      'Integrasi dengan sistem inventory perusahaan'
     ],
-    tech: ['Laravel', 'Inertia.js', 'React', 'MySQL', 'Docker', 'WebSockets', 'Midtrans', 'Leaflet']
+    tech: ['Laravel', 'Tailwind CSS', 'PostgreSQL', 'Docker', 'WebSockets', 'REST API']
   },
   {
     id: 'exp-rework-cybersecurity',

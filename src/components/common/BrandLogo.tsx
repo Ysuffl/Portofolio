@@ -24,8 +24,8 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     <div className={`inline-flex items-center gap-2.5 ${className}`}>
       <div className="relative flex items-center justify-center transition-transform group-hover:scale-105 select-none">
         <img
-          src="/ryhndastra.png"
-          alt="Reyhand Astra Logo"
+          src="/yflg.png"
+          alt="MUHAMMAD YUSUF Logo"
           className={`${currentSize.img} object-contain drop-shadow-md`}
           loading="eager"
         />
@@ -34,7 +34,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       {withText && (
         <div className="flex flex-col text-left">
           <span className={`font-bold text-white tracking-wide leading-tight drop-shadow-sm ${currentSize.text}`}>
-            Reyhand Astra
+            MUHAMMAD YUSUF
           </span>
           <span className="text-[11px] text-[#fff9d4] font-mono font-medium flex items-center gap-1 drop-shadow-xs">
             &gt;_ Full-Stack &amp; Mobile

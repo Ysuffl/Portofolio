@@ -63,7 +63,7 @@ export const ContactSection: React.FC = () => {
   const mailtoLink = `mailto:${profileData.contact.email}?subject=${encodeURIComponent(
     selectedTopic.subject
   )}&body=${encodeURIComponent(
-    `Halo Reyhand,\n\nSaya ingin berdiskusi mengenai topik: ${selectedTopic.label}.\n\n[Tulis pesan Anda di sini]\n\nSalam,\n`
+    `Halo Yusuf,\n\nSaya ingin berdiskusi mengenai topik: ${selectedTopic.label}.\n\n[Tulis pesan Anda di sini]\n\nSalam,\n`
   )}`;
 
   return (
@@ -180,11 +180,10 @@ export const ContactSection: React.FC = () => {
                         key={topic.id}
                         type="button"
                         onClick={() => setSelectedTopic(topic)}
-                        className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-mono font-bold border-2 transition-all cursor-pointer ${
-                          isSelected
+                        className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-mono font-bold border-2 transition-all cursor-pointer ${isSelected
                             ? 'bg-[#0284c7] text-white border-[#0f172a] shadow-[2px_2px_0px_#0f172a]'
                             : 'bg-[#fffdf5] text-[#0f172a] border-[#0f172a] shadow-[1.5px_1.5px_0px_#0f172a] hover:bg-[#fde047]'
-                        }`}
+                          }`}
                       >
                         {topic.label}
                       </button>
