@@ -345,10 +345,10 @@ export const experienceData: ExperienceItem[] = [
   },
   {
     id: 'exp-multiraksa-ft',
-    period: 'Agustus 2024 - Juli 2026',
+    period: 'Agustus 2025 - November 2025',
     role: 'Frontend Developer',
     organization: 'PT. Multiraksa Tribrata',
-    badge: 'Corporate Training',
+    badge: 'Project-Based Internship',
     category: 'bootcamp',
     description:
       'Program Teaching Factory di SMK Nurul Islam Jakarta bekerjasama dengan PT. Multiraksa dengan fokus pada pengembangan web modern menggunakan React, TypeScript, dan integrasi REST API. Dilengkapi juga dengan pembelajaran state management, otentikasi data, dan kolaborasi tim dalam project client.',
@@ -358,6 +358,23 @@ export const experienceData: ExperienceItem[] = [
       'Project bersama tim dengan pendekatan Agile Development'
     ],
     tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'REST API']
+  },
+  {
+    id: 'exp-teaching-factory',
+    period: 'Oktober 2025 - Juni 2026',
+    role: 'Fullstack Developer',
+    organization: 'SMK NURUL ISLAM JAKARTA',
+    badge: 'Teaching Factory',
+    category: 'project',
+    description:
+      'Mengelola Project internal sekolah dengan mengedepankan inovasi, kreatifitas, dan juga standar industri.',
+    highlights: [
+      'Web Application & Network Penetration Testing',
+      'Metodologi Bug Bounty & Eksploitasi OWASP Top 10',
+      'Vulnerability Assessment & Security Reporting',
+      'Fokus Offensive Red Team dengan Pemahaman Blue/Purple Team'
+    ],
+    tech: ['Laravel', 'React', 'PHP', 'Java Script', 'Python', 'Linux', 'docker']
   },
   {
     id: 'exp-exotic-pkl',
@@ -374,22 +391,5 @@ export const experienceData: ExperienceItem[] = [
       'Integrasi dengan sistem inventory perusahaan'
     ],
     tech: ['Laravel', 'Tailwind CSS', 'PostgreSQL', 'Docker', 'WebSockets', 'REST API']
-  },
-  {
-    id: 'exp-rework-cybersecurity',
-    period: 'Agu 2026 - Des 2026',
-    role: 'Cyber Security Trainee (Red Team Focus)',
-    organization: 'Cyber Security Bootcamp by Rework Academy',
-    badge: 'Cyber Security Bootcamp',
-    category: 'security',
-    description:
-      'Pelatihan intensif keamanan siber komprehensif mulai dari fundamental cybersecurity, vulnerability assessment, web application penetration testing (OWASP Top 10), network penetration testing, bug bounty hunting, hingga penyusunan security reporting profesional. Fokus mendalam pada Red Team (Offensive Security) dengan pemahaman komplementer Blue Team (Defensive) dan Purple Team.',
-    highlights: [
-      'Web Application & Network Penetration Testing',
-      'Metodologi Bug Bounty & Eksploitasi OWASP Top 10',
-      'Vulnerability Assessment & Security Reporting',
-      'Fokus Offensive Red Team dengan Pemahaman Blue/Purple Team'
-    ],
-    tech: ['Web App Pentesting', 'Network Security', 'OWASP Top 10', 'Bug Bounty', 'Red Teaming', 'Linux Security', 'Security Reporting']
   }
 ];
